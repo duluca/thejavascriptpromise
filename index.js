@@ -3,6 +3,8 @@
  */
 'use strict';
 
+require('dotenv').config();
+
 var http = require('http');
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -21,7 +23,7 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 
 var server = http.createServer(app);
 
-var port = process.env.PORT || 3000
+var port = process.env.TJP_PORT || 3000
 
 server.listen(port, function () {
   console.log('Server listening on port ' + port);

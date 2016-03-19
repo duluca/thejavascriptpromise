@@ -31,3 +31,5 @@ node_modules
 dbnavigator.xml
 .idea/misc.xml
 workspace.xml
+.env
+.idea
