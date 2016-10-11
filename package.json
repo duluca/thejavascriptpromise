@@ -1,10 +1,10 @@
 {
   "name": "thejavascriptpromise",
   "version": "1.0.0",
-  "description": "",
+  "description": "Express App for TheJavaScriptPromise.com",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
