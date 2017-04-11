@@ -51,7 +51,7 @@
 		<a href="http://thejavascriptpromise.com"><img style="width: 100%" alt="The JavaScript Promise" src="images/jsp_logo.png"></a>
 	</div>
 	<div class="center">
-		<h3 align="center" style="padding:10px;">by Doguhan Uluca</h3>
+		<h3 align="center" style="padding:10px; color: black; margin-top: -30px; margin-bottom: 30px;">by Doguhan Uluca</h3>
 	</div>
 	<div align="center">
 		<a href="https://www.linkedin.com/in/duluca/" target="_blank"><img alt="Doguhan Uluca" src="images/Doguhan_web.jpg" class="image-cropper"></a>
@@ -60,6 +60,25 @@
 		<a href="https://www.npmjs.com/~duluca" target="_blank"><img alt="Check out duluca's npm packages" src="images/npm.png" class="image-cropper"></a>
 		<a href="https://hub.docker.com/r/duluca/" target="_blank"><img alt="Check out duluca's Docker images" src="images/docker.png" class="image-cropper"></a>
 	</div>
+	<div align="center" style="padding: 10px; display: none;" id="ngconf">
+		<img alt="ng-conf" src="images/ng-conf.png" style="height: 100px">
+		<span style="color: black; line-height: 25px;">
+			<div><iframe width="560" height="315" src="https://www.youtube.com/embed/Sd1aM8181kc" frameborder="0" allowfullscreen></iframe></div>
+			<div>
+				<span style="font-weight: bold;">Download</span> <span style="font-style: italic;">'Do More with Less'</span> slides
+				as PDF <a href="https://www.dropbox.com/s/iyaa468j035jm77/do-more-with-less-js.pdf?dl=0" target="_blank">here</a>.
+			</div>
+			<div><span style="font-weight: bold;">Read</span> Building Scalable and Beautiful AngularJS Apps blog series <a href="#blogs">here</a>.</div>
+			<div><span style="font-weight: bold;">Learn</span> Full-Stack TypeScript with the Minimal MEAN project <a href="#mean">here</a>.</div>
+		</span>
+	</div>
+	<script>
+		var releaseDate = new Date('2017-04-07T16:10:00-06:00')
+		var currentDate = new Date()
+		if (currentDate >= releaseDate) {
+			document.getElementById('ngconf').style.display = 'block'
+		}
+	</script>
 	<section id="cd-timeline" class="cd-container">
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie"></div>
@@ -96,16 +115,16 @@
 			<div class="cd-timeline-content">
 				<h2>Self Guided Learning</h2>
 				<p>Absolute beginner or seasoned veteran? Learn JavaScript, Node.JS, front-end and back-end coding at your own pace. Check
-					out <a href="https://github.com/excellalabs/the-javascript-curriculum">The JavaScript Curriculum</a> for a self guided
-					learning experience.
+					out <a href="https://github.com/excellalabs/the-javascript-curriculum/blob/master/README.md">The JavaScript Curriculum</a>					for a self guided learning experience.
 				</p>
-				<a href="https://github.com/excellalabs/the-javascript-curriculum" class="cd-read-more">Start The JavaScript Curriculum</a>
+				<a href="https://github.com/excellalabs/the-javascript-curriculum/blob/master/README.md" class="cd-read-more">Start The JavaScript Curriculum</a>
 			</div>
 		</div>
+		<a name="blogs"></a>
 		<div class="cd-timeline-block" style="margin-top: 300px;">
-			<div class="cd-timeline-img cd-picture"></div>
+			<div class="cd-timeline-img" style="background-image: url(https://angular.io/resources/images/logos/angular2/angular.svg);"></div>
 			<div class="cd-timeline-content">
-				<h2>Building Scalable and Beautiful Angular Apps</h2>
+				<h2>Building Scalable and Beautiful AngularJS Apps</h2>
 				<p>
 					Building front-end applications with a scalable-code architecture is a topic foreign to many, but an issue consistently encountered
 					by teams small and large. Furthermore, building a front-end application that looks and behaves great is difficult and
@@ -114,12 +133,23 @@
 					  target="_blank">Angular 1.5 starter</a> and why I wrote a 6-part blog post series to explain the motivation behind the
 					choices I made or techniques I learned from the masters of the Angular community.
 				</p>
-				<div>> <a href="http://ng15demo.thejavascriptpromise.com/" target="_blank">Demo</a></div>
-				<a href="https://www.excella.com/insights/building-scalable-and-beautiful-angular-apps-part-one" class="cd-read-more">Read the 6-part Series</a>.
+				<div>
+					<em>Building Scalable and Beautiful AngularJS Apps Series</em>
+					<ol style="list-style-type: decimal; margin-left: 25px; padding: 5px; line-height: 25px;">
+						<li><a href="https://www.excella.com/insights/building-scalable-and-beautiful-angular-apps-part-one">Leveraging Existing Skills and Pushing the Envelope</a></li>
+						<li><a href="https://www.excella.com/insights/building-scalable-and-beautiful-angular-apps-part-two">Web App Packaging and Publishing Best Practices</a></li>
+						<li><a href="https://www.excella.com/insights/building-scalable-and-beautiful-angular-apps-part-three">Organized Code and Scalable Angular Architecture</a></li>
+						<li><a href="https://www.excella.com/insights/building-scalable-and-beautiful-angular-apps-part-four">Reusable Components, Templates, and Services</a></li>
+						<li><a href="https://www.excella.com/insights/building-scalable-and-beautiful-angular-apps-part-five">Default Beauty and Great Mobile-First UX with Angular Material</a></li>
+						<li><a href="https://www.excella.com/insights/building-scalable-and-beautiful-angular-apps-part-6">Navigation Lifecycle, Authentication Hooks, and Role Based Navigation</a></li>
+					</ol>
+				</div>
+				<div>> <a href="http://ng15demo.thejavascriptpromise.com/" target="_blank">Launch the Demo</a></div>
 			</div>
 		</div>
+		<a name="mean"></a>
 		<div class="cd-timeline-block" style="margin-top: 300px;">
-			<div class="cd-timeline-img cd-picture"></div>
+			<div class="cd-timeline-img" style="background-image: url(https://www.typescriptlang.org/assets/images/logo.svg)"></div>
 			<div class="cd-timeline-content">
 				<h2>Minimal MEAN</h2>
 				<p>
@@ -128,11 +158,12 @@
 					full-stack development with a consistent set of tools and best practices using the same language, JavaScript. No more
 					to context switching between front-end and back-end languages, libraries and tools. That is The JavaScript Promise.
 					My easy to learn and use stack 'Minimal MEAN' will get you started and deployed on the cloud over a lazy weekend, without
-					requiring a MongoDB install, while leveraging the latest tools like async/await with Typescript, ng2, Node v6.
+					requiring a MongoDB install, while leveraging the latest tools like async/await with Typescript, Angular LTS, Node LTS.
 				</p>
-				<a href="https://github.com/excellalabs/minimal-mean" class="cd-read-more">Get the Source Code</a>.
+				<a href="https://github.com/excellalabs/minimal-mean" class="cd-read-more">Get the Source Code</a>
 			</div>
 		</div>
+
 		<div class="cd-timeline-block" style="margin-top: 300px;">
 			<div class="cd-timeline-img cd-location"></div>
 			<div class="cd-timeline-content">
@@ -158,7 +189,7 @@
 			</div>
 		</div>
 		<div class="cd-timeline-block" style="margin-top: 300px;">
-			<div class="cd-timeline-img cd-location"></div>
+			<div class="cd-timeline-img" style="background-size: cover; background-image: url(https://secure.meetupstatic.com/photos/event/8/0/6/6/global_435392870.jpeg)"></div>
 			<div class="cd-timeline-content">
 				<h2>Join the Community</h2>
 				<p>
@@ -168,7 +199,7 @@
 				<a href="https://www.meetup.com/techtalkdc/" class="cd-read-more">Join Tech Talk DC</a></div>
 		</div>
 		<div class="cd-timeline-block" style="margin-top: 300px;">
-			<div class="cd-timeline-img cd-picture"></div>
+			<div class="cd-timeline-img" style="background-size: cover; background-image: url(http://www.khanaas.com/images/kirk.jpg)"></div>
 			<div class="cd-timeline-content">
 				<h2>Get Outraged with Khaaaaaaaaaaaaaan!</h2>
 				<p>Go to
