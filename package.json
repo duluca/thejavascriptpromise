@@ -1,14 +1,22 @@
 {
   "name": "thejavascriptpromise",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Express App for TheJavaScriptPromise.com",
   "main": "index.js",
+  "imageRepo": "duluca/thejavascriptpromise",
+  "imageName": "thejavascriptpromise",
+  "imagePort": "8080",
   "scripts": {
     "start": "http-server",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "image:build": "docker build . -t duluca/thejavascriptpromise",
-    "image:run": "docker run -p 8080:3000 duluca/thejavascriptpromise",
-    "image:publish": "docker push duluca/thejavascriptpromise"
+    "docker:build": "with-package docker image build . -t pkg.imageRepo:pkg.version && npm run docker:tag",
+    "docker:tag": "with-package docker image tag pkg.imageRepo:pkg.version pkg.imageRepo:latest",
+    "docker:run": "npm run docker:clean && npm run docker:runHelper",
+    "docker:runHelper": "with-package docker run --name pkg.imageName -d -p pkg.imagePort:3000 pkg.imageRepo",
+    "docker:publish": "with-package docker image push pkg.imageRepo",
+    "docker:clean": "with-package docker rm -f pkg.imageName || true",
+    "docker:taillogs": "with-package docker logs -f pkg.imageName",
+    "docker:debug": "npm run docker:build && npm run docker:run && sleep 1 && with-package open 'http://localhost:pkg.imagePort' && npm run docker:taillogs",
+    "now:relase": "now --docker --public"
   },
   "repository": {
     "type": "git",
@@ -20,6 +28,8 @@
     "url": "https://github.com/duluca/thejavascriptpromise/issues"
   },
   "homepage": "https://github.com/duluca/thejavascriptpromise#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "with-package": "^0.2.0"
   }
 }
