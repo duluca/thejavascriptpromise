@@ -1,6 +1,6 @@
 {
   "name": "thejavascriptpromise",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Express App for TheJavaScriptPromise.com",
   "main": "index.js",
   "imageRepo": "duluca/thejavascriptpromise",
@@ -11,7 +11,7 @@
     "docker:build": "with-package docker image build . -t pkg.imageRepo:pkg.version && npm run docker:tag",
     "docker:tag": "with-package docker image tag pkg.imageRepo:pkg.version pkg.imageRepo:latest",
     "docker:run": "npm run docker:clean && npm run docker:runHelper",
-    "docker:runHelper": "with-package docker run --name pkg.imageName -d -p pkg.imagePort:3000 pkg.imageRepo",
+    "docker:runHelper": "with-package docker run --name pkg.imageName -d -p pkg.imagePort:80 pkg.imageRepo",
     "docker:publish": "with-package docker image push pkg.imageRepo",
     "docker:clean": "with-package docker rm -f pkg.imageName || true",
     "docker:taillogs": "with-package docker logs -f pkg.imageName",
