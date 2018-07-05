@@ -18,3 +18,8 @@ img {
     padding: 10px;
     text-align: center;
 }
+
+.hex {
+    zoom: 0.5;
+    max-height: 462px;
+}
